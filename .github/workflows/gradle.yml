@@ -47,4 +47,13 @@ jobs:
     # - name: Build with Gradle 8.9
     #   run: gradle build
 
+    - name: Build with Gradle Wrapper
+      run: ./gradlew build
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+  
+      with:
+        name: Package
+        path: app/build/libs
   
